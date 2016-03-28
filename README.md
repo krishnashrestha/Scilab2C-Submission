@@ -37,13 +37,13 @@ In the following example, we consider 3 intervals I1 = [5,11], I2 = (11,15] and 
 Displayed output:
 
  outside  =
-   2.
+ 2.
    
  counts  =
-   4.    1.    0.
-   
+ 4.    1.    0.
+
  i_bin  =
-   1.    2.    0.    1.    1.    0.    1.
+ 1.    2.    0.    1.    1.    0.    1.
    
 Example copied from Scilab Help.
 
