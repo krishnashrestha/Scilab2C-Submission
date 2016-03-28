@@ -107,6 +107,7 @@ The command "generateHeaderFile('foo', ['uint8', 'x', 'float', 'f', 'long int', 
 float foo (int, float, long int)
 
 How to use:
+
 1. Launch SciNotes in Scilab 5.5.2 (any platform) and paste the code.
 
 2. Save (Ctrl+S) and execute the code (Ctrl+L)
