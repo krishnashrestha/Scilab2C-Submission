@@ -85,9 +85,7 @@ To execute, paste the code to Notepad, or any other text editor, save it with .c
 
 Created using Scilab 5.5.2 on Windows 10 platform. 
 
-
 Function name: generateHeaderFile
-
 
 Description:
 
@@ -106,9 +104,7 @@ Input arguments:
 Example :
 
 The command "generateHeaderFile('foo', ['uint8', 'x', 'float', 'f', 'long int', 's'], 'float')" will create a C header file "foo.h" in the current working directory. The contents of the file "foo.h" will be :
-
 float foo (int, float, long int)
-
 
 How to use:
 1. Launch SciNotes in Scilab 5.5.2 (any platform) and paste the code.
