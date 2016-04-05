@@ -20,13 +20,9 @@ function generateHeaderFile(functionName, arguments, returnType)
     for (n = 1 : 1 : m)
         o = arguments(1, n)
         
-        if (o == 'char' | o == 'char *' | o == 'int' | o == 'int *' | o == 'long int' | o == 'float') then
+        if (o == 'char' | o == 'char *' | o == 'int' | o == 'int *' | o == 'long int' | o == 'float' | o == 'uint8') then
             l = l + 1
             arg(1, l) = o
-            continue
-        elseif (o == 'uint8')
-            l = l + 1
-            arg(1, l) = 'int'
             continue
         else
             continue
