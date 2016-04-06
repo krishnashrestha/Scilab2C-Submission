@@ -1,7 +1,7 @@
 //Created by: Krishna Shrestha
 //E-mail: shresthakrishna1997@gmail.com
 
-//P.S. : The optional parameters 'method' and 'extrapolation' are excluded
+//P.S. : Since the numeric values are equal in case of each method, the optional parameters 'method' and 'extrapolation' are excluded
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -16,8 +16,8 @@ float interp1(float x1, float x2, float xp, float y1, float y2)
 
 void main()
 {
-    int n, i;
-    float xp, yp;
+    int m, n, i;
+    float xp[50], yp[50];
     float x[50], y[50];
 
     system("cls");
@@ -31,13 +31,27 @@ void main()
     printf("\nEnter the elements of y: ");
     for (i = 0; i < n; i++)
         scanf("%f", &y[i]);
+    printf("\nEnter the number of elements in xp: ");
+    scanf("%d", &m);
     printf("\nEnter the value of xp: ");
-    scanf("%f", &xp);
+    for (i = 0; i < m; i++)
+        scanf("%f", &xp);
 
     //All the necessary values may be passed on to another function 'interp1', where all the necessary calculations may be done.
-    yp = interp1(x[0], x[n-1], xp, y[0], y[n-1]);
+    for (i = 0; i < m-1; i++)
+    {
+        yp[i] = interp1(x[i], x[i+1], xp[i], y[i], y[i+1]);
+        //Display the result
+        printf("\n\nResult\nyp = \n");
+        for (i = 0; i < m; i++)
+            printf("\t%f", yp[i]);
+    }
+    if (m == 1)
+    {
+        yp[0] = interp1(x[0], x[n-1], xp[0], y[0], y[n-1]);
+        //Display the result
+        printf("\n\nResult");
+        printf("\nyp = \n %f", yp[0]);
+    }
 
-    //Display the result
-    printf("\n\nResult");
-    printf("\nyp = \n %.2f", yp);
 }
